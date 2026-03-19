@@ -1,12 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background-image: url("../images/background.jpg");
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 nav {
+    position: sticky;
+    top: 0;
     display: flex;
     background-color: #000000;
-    padding: 2%;
-    border-radius: 5px;
-    flex-direction: row-reverse;
+    padding: 1%;
     gap: 5%;
+    border-bottom: rgb(255, 255, 255) solid 5px;
+    z-index: 3;
+    box-shadow: 0 0 10px black;
+    background-image: url(../images/black-texture.jpg);
+    background-size: 100%;
 }
 
 .nav-item {
-    margin-right: 20px;
+    margin: 0;
+    position: relative;
+    top: 7px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+#header {
+    font-size: xx-large;
+    color: white;
+}
+
+.hero {
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: rgb(255, 255, 255) solid 5px;
+    box-shadow: 0 0 10px black;
+}
+
+.title {
+    position: absolute;
+    top: -5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7rem;
+    color: white;
+}
+
+.getstarted {
+    position: absolute;
+    left: 50%;
+    top: 35vh;
+    transform: translateX(-50%);
+
+    height: 10vh;
+    font-size: 4vh;
+    width: 15%;
+    z-index: 2;
+    background-color: black;
+    border: rgb(255, 255, 255) solid 5px;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.getstarted:hover {
+    background-color: rgb(69, 69, 69);
+}
+
+.picture-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(0, 0, 0);
+    border: rgb(255, 255, 255) solid 5px;
+    border-radius: 15px;
+    width: 60%;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 0 10px black;
+    background-image: url("../images/black-texture.jpg");
+    background-size: 100%;
+
+    margin-left: 50%;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    transform: translateX(-50%);
+}
+
+#previous-picture,
+#next-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    height: 50px;
+    width: 50px;
+    border: black solid 5px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px black;
+
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+#previous-picture:hover,
+#next-picture:hover {
+    background-color: gray;
+}
+
+#next-picture:active,
+#previous-picture:active {
+    transform: scale(0.9);
+}
+
+#previous-picture i,    /* Icons inside of buttons */
+#next-picture i {
+    font-size: 200%;
+}
+
+#home-image {
+    width: 80%;
+    border-radius: 15px;
 }
