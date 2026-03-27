@@ -79,6 +79,7 @@ a:hover {
     border: rgb(255, 255, 255) solid 5px;
     color: white;
     border-radius: 15px;
+
     cursor: pointer;
 }
 
