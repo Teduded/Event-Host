@@ -6,7 +6,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="../JavaScript/script.js"></script>
 </head>
 <body>
     <nav>
@@ -18,12 +17,25 @@
     <div class="hero">
         <img class="hero-image" src="../images/home-hero.jpg" alt="Hero Image">
         <h1 class="title">EVENTSIDA</h1>
-        <button class="getstarted">GET STARTED</button>
+        <button id="getstarted">GET STARTED</button>
     </div>
-    <div class="picture-tab">
-        <button id="previous-picture"><i class="fa-solid fa-arrow-down fa-rotate-90"></i></button>
-        <img src="../images/home-picture1.jpg" alt="Bild av events" id="home-image">
-        <button id="next-picture"><i class="fa-solid fa-arrow-down fa-rotate-270"></i></button>
+    
+    <div class="content-row">
+        <div class="info-box">
+            <h2>Event Info</h2>
+            <p>We offer a huge amount of activities and places for your very own event.</p>
+            <p>Here in the home page, you can look at pictures of other events.</p>
+            <p>Click 'GET STARTED' at the top of the screen to start planning your event.</p>
+            <p>You can also read about us and find our contacts at the top of the screen.</p>
+        </div>
+
+        <div class="picture-tab">
+            <button id="previous-picture"><i class="fa-solid fa-arrow-down fa-rotate-90"></i></button>
+            <img src="../images/home-picture1.jpg" alt="Bild av events" id="home-image">
+            <button id="next-picture"><i class="fa-solid fa-arrow-down fa-rotate-270"></i></button>
+        </div>
     </div>
+    
+    <script src="../JavaScript/script.js"></script>
 </body>
 </html>
