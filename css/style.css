@@ -246,7 +246,7 @@ nav {
 
 .aboutBox {
     display: flex;
-    flex-direction: row; /* Bild och text bredvid varandra på desktop */
+    flex-direction: row;
     width: calc(45% - 20px);
     min-height: 250px;
     background-color: black;
