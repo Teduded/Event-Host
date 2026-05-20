@@ -1,3 +1,6 @@
+
+/* Lite generella grejer */
+
 body {
     margin: 0;
     padding: 0;
@@ -87,6 +90,10 @@ nav {
     text-align: center;
 }
 
+/* ================================================== */
+
+/* HOME PAGE */
+
 #getstarted {
     position: absolute;
     left: 50%;
@@ -97,14 +104,15 @@ nav {
     min-width: 200px;
     background-color: black;
     border: rgb(255, 255, 255) solid 5px;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 15px;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s;
 }
 
 #getstarted:hover {
-    background-color: rgb(69, 69, 69);
+    background-color: rgb(255, 255, 255);
+    color: black;
     transform: translateX(-50%) scale(1.05);
 }
 
@@ -232,6 +240,8 @@ nav {
     }
 }
 
+/* ================================================== */
+
 /* GREJER FÖR "ABOUT" */
 
 .aboutFlexbox {
@@ -305,4 +315,274 @@ nav {
         font-size: 0.9rem;
         padding: 20px;
     }
+}
+
+/* ================================================== */
+
+/* TABELLSTYLING FÖR ABOUT-SIDAN */
+
+.table-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: black;
+    border: white solid 5px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    color: white;
+}
+
+.table-container h2 {
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+/* Styling för översta raden */
+.staff-table th {
+    background-color: #222;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-bottom: 3px solid white;
+}
+
+/* Generell styling */
+.staff-table td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+/* Olika färger på raderna */
+.staff-table tbody tr:nth-child(odd) {
+    background-color: #0b0b0b;
+}
+
+.staff-table tbody tr:nth-child(even) {
+    background-color: #161616;
+}
+
+/* Effekt vid hover över raderna i tabell */
+.staff-table tbody tr:hover {
+    background-color: #252525;
+}
+
+/* Sista raden har en helt annan styling */
+.staff-table tfoot tr {
+    background-color: white !important;
+    color: black !important;
+    font-weight: bold;
+}
+
+.staff-table tfoot td {
+    border-top: 3px solid white;
+    border-bottom: none;
+    padding: 15px 12px;
+}
+
+@media (max-width: 600px) {
+    .table-container {
+        width: 90%;
+        padding: 10px;
+    }
+    .staff-table {
+        font-size: 0.9rem;
+    }
+    .staff-table th, .staff-table td {
+        padding: 8px;
+    }
+}
+
+/* ================================================== */
+
+/* CONTACTS SIDA */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: white;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px;
+    background-color: #111;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    background-color: #222;
+}
+
+.submit-btn {
+    padding: 12px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 5px;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.02);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* ================================================== */
+
+/* GET STARTED SIDA */
+
+.select-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.select-btn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.select-btn:active {
+    transform: scale(0.95);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 400px;
+}
+
+.login-box {
+    background-color: black;
+    color: white;
+    border: white solid 5px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px black;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-password-group {
+    margin-top: 10px;
+}
+
+.input-group label {
+    font-size: 1rem;
+}
+
+.input-group input {
+    padding: 10px;
+    background-color: #111;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #222;
+}
+
+.login-btn {
+    display: block;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.03);
+}
+
+.login-btn:active {
+    transform: scale(0.97);
+}
+
+#event-section {
+    display: none;
 }

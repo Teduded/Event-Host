@@ -1,11 +1,15 @@
+
+<!-- DETTA ÄR DÄR MAN VÄLJER TYP AV EVENT -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Get Started</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="../icons/eventFavicon.png">
 </head>
 <body>
     <nav>
@@ -14,14 +18,76 @@
         <div class="nav-item"><a href="about.html">About</a></div>
         <div class="nav-item"><a href="contacts.html">Contact</a></div>
     </nav>
+
     <div class="hero">
-        <img class="hero-image" src="../images/home-hero.jpg" alt="Hero Image">
-        <h1 class="title">EVENTS</h1>
-        <h1 class="subtitle">Choose your event</h1>
+        <img class="hero-image" src="../images/home-hero.jpg" alt="Hero Image" loading="lazy">
+        <h1 class="title">CHOOSE EVENT</h1>
+        <h1 class="subtitle" id="page-subtitle">Please login to continue</h1>
     </div>
 
-    <div class="eventlist">     <!-- List of all the events -->
-        <div class="eventchoice"></div>
+    <!-- Ruta för login (innan man kan börja) -->
+
+    <div class="login-container" id="login-section">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="display-name">Name</label>
+                    <input type="text" id="display-name" required placeholder="Enter your name...">
+                </div>
+                <div class="input-group">
+                    <label for="username" style="margin-top: 10px;">Email</label>
+                    <input type="email" id="username" required placeholder="Enter email...">
+                </div>
+                <div class="input-group login-password-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter password...">
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Lista av alla event -->
+
+    <div class="aboutFlexbox" id="event-section">
+
+        <div class="aboutBox">
+            <img class="aboutImage" src="../images/Festival.png" alt="Concert" loading="lazy">
+            <div class="aboutText">
+                <h3>Concert / Festival</h3>
+                <p>Plan the ultimate music experience. We provide top-tier stages, sound systems, and exclusive connections to DJs like Anis Don Demina.</p>
+                <button class="select-btn" data-event="Concert / Festival">Select this event</button>
+            </div>
+        </div>
+
+        <div class="aboutBox">
+            <img class="aboutImage" src="../images/home-picture2.jpg" alt="Corporate Event" loading="lazy">
+            <div class="aboutText">
+                <h3>Corporate Event</h3>
+                <p>Let Xi Lee Long Yeong handle the budget while you party. Perfect for team building, networking, and celebrating your company's milestones.</p>
+                <button class="select-btn" data-event="Corporate Event">Select this event</button>
+            </div>
+        </div>
+
+        <div class="aboutBox">
+            <img class="aboutImage" src="../images/home-picture3.jpg" alt="Birthday Gala" loading="lazy">
+            <div class="aboutText">
+                <h3>Birthday Gala</h3>
+                <p>For those who want something extraordinary. We arrange everything from luxury tents to magic shows and wild toucan themes.</p>
+                <button class="select-btn" data-event="Birthday Gala">Select this event</button>
+            </div>
+        </div>
+
+        <div class="aboutBox">
+            <img class="aboutImage" src="../images/home-picture1.jpg" alt="Private Party" loading="lazy">
+            <div class="aboutText">
+                <h3>Private Party</h3>
+                <p>Host an unforgettable night for your friends. Vidar Berg promises an alpha-level atmosphere, and we'll keep the music pumping all night.</p>
+                <button class="select-btn" data-event="Private Party">Select this event</button>
+            </div>
+        </div>
+        
     </div>
 
     <script src="../JavaScript/script.js"></script>

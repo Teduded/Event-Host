@@ -1,3 +1,6 @@
+
+<!-- DETTA ÄR HOME PAGE -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="../icons/eventFavicon.png">
 </head>
 <body>
     <nav>
@@ -15,26 +19,35 @@
         <div class="nav-item"><a href="contacts.html">Contact</a></div>
     </nav>
     <div class="hero">
-        <img class="hero-image" src="../images/home-hero.jpg" alt="Hero Image">
+        <img class="hero-image" src="../images/home-hero.jpg" alt="Hero Image" loading="lazy">
         <h1 class="title">EVENTSIDA</h1>
         <button id="getstarted">GET STARTED</button>
     </div>
     
-    <div class="content-row">
-        <div class="info-box">
-            <h2>Event Info</h2>
-            <p>We offer a huge amount of activities and places for your very own event.</p>
-            <p>Here in the home page, you can look at pictures of other events.</p>
-            <p>Click 'GET STARTED' at the top of the screen to start planning your event.</p>
-            <p>You can also read about us and find our contacts at the top of the screen.</p>
-        </div>
+    <main class="content-row">
 
-        <div class="picture-tab">
-            <button id="previous-picture"><i class="fa-solid fa-arrow-down fa-rotate-90"></i></button>
-            <img src="../images/home-picture1.jpg" alt="Bild av events" id="home-image">
-            <button id="next-picture"><i class="fa-solid fa-arrow-down fa-rotate-270"></i></button>
-        </div>
-    </div>
+        <!-- Ruta för information -->
+
+        <section class="info-box">
+            <h2 style="margin-top: 0; border-bottom: 2px solid white; padding-bottom: 10px;">Why Choose Us?</h2>
+            <p>We deliver unforgettable experiences with premium quality. When booking through Eventsida, you always get:</p>
+            
+            <ul class="info-list">
+                <li><strong>Tailored Concepts:</strong> Custom themes, luxury tents, and wild decorations tailored to your exact vision.</li>
+                <li><strong>Top-Tier Equipment:</strong> Professional sound systems, staging, and lightning setups for any venue size.</li>
+                <li><strong>Premium Network:</strong> Exclusive access to world-class DJs, local artists, and experienced budget managers.</li>
+                <li><strong>Full Service:</strong> We handle everything from initial planning and logistics to setup and cleanup.</li>
+            </ul>
+        </section>
+
+        <!-- Ruta för bilder -->
+
+        <section class="picture-tab">
+            <img id="home-image" src="../images/home-picture1.jpg" alt="Event Image" loading="lazy">
+            <button id="previous-picture"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="next-picture"><i class="fa-solid fa-chevron-right"></i></button>
+        </section>
+    </main>
     
     <script src="../JavaScript/script.js"></script>
 </body>

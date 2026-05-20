@@ -1,0 +1,51 @@
+
+<!-- DETTA ÄR FÖR NÄR MAN VÄLJER PLATS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Location</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="../icons/eventFavicon.png">
+</head>
+<body>
+    <nav>
+        <div id="header">EVENTSIDA</div>
+        <div class="nav-item"><a href="home.html">Home</a></div>
+        <div class="nav-item"><a href="about.html">About</a></div>
+        <div class="nav-item"><a href="contacts.html">Contact</a></div>
+    </nav>
+
+    <div class="hero">
+        <img class="hero-image" src="../images/home-hero.jpg" alt="Hero Image">
+        <h1 class="title">CHOOSE VENUE</h1>
+        <h1 class="subtitle" id="location-subtitle">Select a venue in Täby</h1>
+    </div>
+
+    <section class="content-row">
+
+        <!-- Ruta för information om platser -->
+
+        <div class="info-box">
+            <h2 style="margin-top: 0; border-bottom: 2px solid white; padding-bottom: 10px;">Venue Info</h2>
+            <p id="venue-instructions">Click on a marker on the map to see details about our available locations in Täby.</p>
+            <div id="venue-details" style="display: none; margin-top: 20px;">
+                <h3 id="venue-name" style="color: #fff; margin-bottom: 5px;">Validator vill att jag ska ha något här</h3>
+                <p id="venue-desc" style="color: #ccc; font-size: 0.95rem; line-height: 1.4;"></p>
+                <button id="confirm-venue-btn" class="submit-btn" style="width: 100%; margin-top: 15px;">Book this venue</button>
+            </div>
+        </div>
+
+        <!-- Karta -->
+
+        <div class="picture-tab" id="map" style="background-color: #111;"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
