@@ -1,4 +1,3 @@
-
 // KOD FÖR SIDORNA
 
 const homeImage = document.getElementById("home-image")
@@ -85,13 +84,6 @@ function initLogin() {
     }
 }
 
-// Säkerställ att skriptet väntar tills HTML är inläst ordentligt
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initLogin);
-} else {
-    initLogin();
-}
-
 // Säkerställer att skriptet väntar tills HTML är inläst ordentligt
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initLogin);
@@ -99,12 +91,19 @@ if (document.readyState === "loading") {
     initLogin();
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
+    const locationSubtitle = document.getElementById("location-subtitle");
+    const mapContainer = document.getElementById('map');
+
+    if (!locationSubtitle || !mapContainer) {
+        return;
+    }
+
     // Hämtar vilket event som valdes på förra sidan
     const chosenEvent = sessionStorage.getItem("chosenEvent") || "Event";
-    document.getElementById("location-subtitle").textContent = "Select a venue in Täby for your " + chosenEvent;
-
+    
+    locationSubtitle.textContent = "Select a venue in Täby for your " + chosenEvent;
+    
     // Skapa kartan centrerad över Täby
     const map = L.map('map').setView([59.4439, 18.0687], 13);
 
